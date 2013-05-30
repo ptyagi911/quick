@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:29
+-keep class com.example.drivequickstart.PhotosActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:16
+-keep class com.example.drivequickstart.TabLayoutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:30
+-keep class com.example.drivequickstart.VideosActivity { <init>(...); }
+
