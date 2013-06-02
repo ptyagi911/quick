@@ -34,9 +34,11 @@ public final class R {
         public static final int videos_white=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
+        public static final int CheckedTextView=0x7f080003;
+        public static final int action_settings=0x7f080004;
         public static final int activity_animateremoval_button=0x7f080000;
         public static final int activity_animateremoval_listview=0x7f080001;
+        public static final int thumbnail_microkind=0x7f080002;
     }
     public static final class layout {
         public static final int activity_animateremoval=0x7f030000;

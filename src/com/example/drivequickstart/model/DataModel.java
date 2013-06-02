@@ -3,15 +3,14 @@ package com.example.drivequickstart.model;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
+
+import com.example.drivequickstart.Constants;
 
 import android.os.Environment;
 import android.util.Log;
 
 public class DataModel {
 
-	private static String TAG = "DriveUploader-DataModel";
-	
 	public static final int MODE_PICTURES = 1;
 	public static final int MODE_VIDEOS = 2;
 	
@@ -19,10 +18,15 @@ public class DataModel {
 		ArrayList<String> items = new ArrayList<String>();
 		
 		HashMap<String, File> files = getDCIMCameraRoll(mode);
+		Object[] filePath = files.values().toArray();
 		
-		for (Entry<String, File>entry : files.entrySet()) {
-			items.add(entry.getKey());
+		for (int i=0; i < 10; i++) {
+			items.add(filePath[i].toString());
 		}
+//		for (Entry<String, File>entry : files.entrySet()) {
+//			System.out.println("File: "+ entry.getKey() + ", value:" + entry.getValue());
+//			items.addAll((Collection<? extends String>) entry.getValue());
+//		}
 		return items;
 	}
 	
@@ -30,7 +34,7 @@ public class DataModel {
 		HashMap<String, File> mediaFiles = new HashMap<String, File>();
 		
 		if (!isMediaMounted()) {
-			Log.e(TAG, "Media is not mounted");
+			Log.e(Constants.TAG_DataModel, "Media is not mounted");
 			return mediaFiles;
 		}
 
@@ -38,7 +42,7 @@ public class DataModel {
 				"DCIM/Camera");
 		
 		if (!dcimCameraDir.canRead()) {
-			Log.e(TAG, "CameraRoll is not readable");
+			Log.e(Constants.TAG_DataModel, "CameraRoll is not readable");
 			return mediaFiles;
 		}
 		

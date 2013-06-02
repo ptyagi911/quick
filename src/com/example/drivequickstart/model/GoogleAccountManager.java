@@ -7,8 +7,6 @@ import com.google.api.services.drive.DriveScopes;
 
 public class GoogleAccountManager {
 
-	private static String TAG = "DriveUploader-GoogleAccountManager";
-	
 	private static Context mAppContext;
 	private static GoogleAccountCredential mCredential;
 	
@@ -20,7 +18,5 @@ public class GoogleAccountManager {
 	public static GoogleAccountCredential getGoogleAccountCredential() {
 		return mCredential;
 	}
-	
-	
 	
 }

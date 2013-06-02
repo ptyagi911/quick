@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import android.util.Log;
 
+import com.example.drivequickstart.Constants;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 import com.google.api.client.http.FileContent;
@@ -14,8 +15,6 @@ import com.google.api.services.drive.Drive;
 
 public class GoogleDriveUtil {
 
-	private static String TAG = "DriveUploader-GoogleDriveUtil";
-	
 	private static Drive mService;
 	
 	public static Drive getDriveServiceInstance() {
@@ -40,7 +39,7 @@ public class GoogleDriveUtil {
 	  		return builder.build();
 		}
 		
-		Log.e(TAG, "GoogleAccountCredential is NULL");
+		Log.e(Constants.TAG_GoogleDriveUtil, "GoogleAccountCredential is NULL");
 		return null;
 	}
 	
@@ -54,7 +53,7 @@ public class GoogleDriveUtil {
 		boolean success = false;
 		
 		if (!file.exists()) {
-			Log.e(TAG, "Doesn't exist File : "+ file);
+			Log.e(Constants.TAG_GoogleDriveUtil, "Doesn't exist File : "+ file);
 			return false;
 		}
 		
@@ -100,7 +99,7 @@ public class GoogleDriveUtil {
 					try {
 						uploadFileToGoogleDrive(file);
 					} catch (IOException e) {
-						Log.e(TAG, "Failed to upload file to google drive: " + 
+						Log.e(Constants.TAG_GoogleDriveUtil, "Failed to upload file to google drive: " + 
 								file.getAbsolutePath());
 						e.printStackTrace();
 					}
