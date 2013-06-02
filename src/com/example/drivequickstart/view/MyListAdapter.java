@@ -56,11 +56,9 @@ public class MyListAdapter extends ArrayAdapter<String> {
 		viewHolder.position = position;
 		List<Integer>mSelectedPositions = mActivity.getSelectedPositions();
 		
-		//String filePath = "/storage/sdcard0/DCIM/Camera/20130518_190623_LLS.jpg";
-		//"/storage/sdcard0/DCIM/Camera/20130531_120035.mp4";
-		new ThumbnailTask(position, viewHolder, this.dataMode).execute(filePath);
-//	    new ThumbnailTask(position, viewHolder, this.dataMode).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, filePath);
-		
+		//new ThumbnailTask(position, viewHolder, this.dataMode).execute(filePath);
+		new ThumbnailTask(position, viewHolder, this.dataMode).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, filePath);
+
 		if (viewHolder.ctv != null) viewHolder.ctv.setText(fileName);
 		if (viewHolder.ctv != null) viewHolder.ctv.setChecked(mSelectedPositions.contains(position));
         
@@ -68,25 +66,28 @@ public class MyListAdapter extends ArrayAdapter<String> {
 	}
 	
 	public static Bitmap createPictureThumbnail(String fileName) {
+		Bitmap imageBitmap = null;
+		
         try     
         {
-
             final int THUMBNAIL_SIZE = 96;
 
             FileInputStream fis = new FileInputStream(fileName);
-            Bitmap imageBitmap = BitmapFactory.decodeStream(fis);
+            imageBitmap = BitmapFactory.decodeStream(fis);
 
             imageBitmap = Bitmap.createScaledBitmap(imageBitmap, THUMBNAIL_SIZE, THUMBNAIL_SIZE, false);
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();  
             imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-            return imageBitmap;
-            //imageData = baos.toByteArray();
-
+            
+        } catch (OutOfMemoryError e) {
+        	System.out.println("Priyanka-Failed to create picture thumbnail: " + e.getMessage());
+        	e.printStackTrace();
+        } catch(Exception ex) {
+        	ex.printStackTrace();
         }
-        catch(Exception ex) {
-        	return null;
-        }
+        
+        return imageBitmap;
 	}
 	
 	private static class ThumbnailTask extends AsyncTask<String, Void, Bitmap> {
@@ -119,13 +120,16 @@ public class MyListAdapter extends ArrayAdapter<String> {
 			String fileName = params[0];
 			Bitmap image = null;
 			
-			if (this.mediaType == DataModel.MODE_PICTURES) {
-				image = createPictureThumbnail(fileName);
-			} else if (this.mediaType == DataModel.MODE_VIDEOS) {
-				image = ThumbnailUtils.createVideoThumbnail(fileName, 
-			    		   Thumbnails.MICRO_KIND);
+			try {
+				if (this.mediaType == DataModel.MODE_PICTURES) {
+					image = createPictureThumbnail(fileName);
+				} else if (this.mediaType == DataModel.MODE_VIDEOS) {
+					image = ThumbnailUtils.createVideoThumbnail(fileName, 
+				    		   Thumbnails.MICRO_KIND);
+				}
+			} catch (OutOfMemoryError e) {
+				e.printStackTrace();
 			}
-			
 			return image;
 		}
 	}
