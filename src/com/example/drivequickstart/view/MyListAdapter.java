@@ -47,13 +47,16 @@ public class MyListAdapter extends ArrayAdapter<String> {
 					inflate(R.layout.activity_animateremoval_row, parent, false);
 			
 			viewHolder = new ViewHolder();
+			viewHolder.ctv = (CheckedTextView)lview.getChildAt(1);
+			viewHolder.image = (ImageView)lview.getChildAt(0);//(ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
+//			viewHolder.ctv = (CheckedTextView)mActivity.findViewById(R.id.CheckedTextView);
+//			viewHolder.image = (ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
+
 			lview.setTag(viewHolder);
-		} else {
-			viewHolder = (ViewHolder) lview.getTag();
 		}
 		
-		viewHolder.ctv = (CheckedTextView)lview.getChildAt(1);
-		viewHolder.image = (ImageView)lview.getChildAt(0);//(ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
+		viewHolder = (ViewHolder) lview.getTag();
+		
 		viewHolder.position = position;
 		List<Integer>mSelectedPositions = mActivity.getSelectedPositions();
 		

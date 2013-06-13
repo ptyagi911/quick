@@ -20,7 +20,7 @@ public class DataModel {
 		HashMap<String, File> files = getDCIMCameraRoll(mode);
 		Object[] filePath = files.values().toArray();
 		
-		for (int i=0; i < 10; i++) {
+		for (int i=0; i < 3; i++) {
 			items.add(filePath[i].toString());
 		}
 //		for (Entry<String, File>entry : files.entrySet()) {
