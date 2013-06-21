@@ -18,6 +18,7 @@ import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.drivequickstart.Logger;
 import com.example.drivequickstart.R;
 import com.example.drivequickstart.model.DataModel;
 import com.haarman.listviewanimations.ArrayAdapter;
@@ -34,6 +35,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		Logger.debug("Priyanka", "Getting view at position: " + position);
 		ViewHolder viewHolder;
 		String filePath = getItem(position);
 		String fileName = filePath.substring(filePath.lastIndexOf("/")+1);
@@ -46,22 +48,24 @@ public class MyListAdapter extends ArrayAdapter<String> {
 			
 			viewHolder = new ViewHolder();
 			viewHolder.ctv = (CheckedTextView)lview.getChildAt(1);
-			viewHolder.image = (ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
-			
+			viewHolder.image = (ImageView)lview.getChildAt(0);//(ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
+//			viewHolder.ctv = (CheckedTextView)mActivity.findViewById(R.id.CheckedTextView);
+//			viewHolder.image = (ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
+
 			lview.setTag(viewHolder);
-		} else {
-			viewHolder = (ViewHolder) lview.getTag();
 		}
+		
+		viewHolder = (ViewHolder) lview.getTag();
 		
 		viewHolder.position = position;
 		List<Integer>mSelectedPositions = mActivity.getSelectedPositions();
 		
-		//new ThumbnailTask(position, viewHolder, this.dataMode).execute(filePath);
-		new ThumbnailTask(position, viewHolder, this.dataMode).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, filePath);
-
 		if (viewHolder.ctv != null) viewHolder.ctv.setText(fileName);
 		if (viewHolder.ctv != null) viewHolder.ctv.setChecked(mSelectedPositions.contains(position));
         
+		new ThumbnailTask(position, viewHolder, this.dataMode).execute(filePath);
+		//new ThumbnailTask(position, viewHolder, this.dataMode).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, filePath);
+		
 		return lview;
 	}
 	
@@ -105,13 +109,19 @@ public class MyListAdapter extends ArrayAdapter<String> {
 	    protected void onPostExecute(Bitmap bitmap) {
 	        if (mHolder != null && mHolder.position == mPosition) {
 	            if(mHolder.image != null) {
+	            	Logger.debug("Priyanka", "Setting image at position: " + 
+		        			mPosition);
 	            	mHolder.image.setImageBitmap(bitmap);
-	            	if (this.mediaType == DataModel.MODE_PICTURES) System.out.println("Priyanka-posted image at:  " + mPosition);
+	            	//if (this.mediaType == DataModel.MODE_PICTURES) System.out.println("Priyanka-posted image at:  " + mPosition);
 	            } else {
-	            	if (this.mediaType == DataModel.MODE_PICTURES)  System.out.println("Priyanka:[Image is null]missed image at:"+mPosition);
+	            	//if (this.mediaType == DataModel.MODE_PICTURES)  System.out.println("Priyanka:[Image is null]missed image at:"+mPosition);
+	            	Logger.debug("Priyanka", "No Image found for position: " + 
+		        			mPosition);
 	            }
 	        } else {
-	        	if (this.mediaType == DataModel.MODE_PICTURES) System.out.println("Priyanka:[holder null]missed image at:"+mPosition);
+	        	//if (this.mediaType == DataModel.MODE_PICTURES) System.out.println("Priyanka:[holder null]missed image at:"+mPosition);
+	        	Logger.debug("Priyanka", "Holder is Null for position: " + 
+	        			mPosition);
 	        }
 	    }
 
