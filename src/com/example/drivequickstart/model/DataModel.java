@@ -1,13 +1,12 @@
 package com.example.drivequickstart.model;
 
+import android.os.Environment;
+import android.util.Log;
+import com.example.drivequickstart.Constants;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import com.example.drivequickstart.Constants;
-
-import android.os.Environment;
-import android.util.Log;
 
 public class DataModel {
 
@@ -20,7 +19,7 @@ public class DataModel {
 		HashMap<String, File> files = getDCIMCameraRoll(mode);
 		Object[] filePath = files.values().toArray();
 		
-		for (int i=0; i < 3; i++) {
+		for (int i=0; i < 10; i++) {
 			items.add(filePath[i].toString());
 		}
 //		for (Entry<String, File>entry : files.entrySet()) {

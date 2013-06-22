@@ -1,10 +1,5 @@
 package com.example.drivequickstart.view;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.widget.Toast;
-
+import com.example.drivequickstart.UploaderService;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
@@ -22,6 +17,11 @@ import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends Activity {
   static final int REQUEST_ACCOUNT_PICKER = 1;
@@ -37,12 +37,17 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
    
     //Start the uploader service
-    //this.startService(new Intent(this, UploaderService.class));
+    this.startService(new Intent(this, UploaderService.class));
     
     //This code should go under uploader service
     credential = GoogleAccountCredential.usingOAuth2(this, DriveScopes.DRIVE);
     startActivityForResult(credential.newChooseAccountIntent(), REQUEST_ACCOUNT_PICKER);
   }
+
+   @Override
+   public void onDestroy() {
+       this.stopService(new Intent(this, UploaderService.class));
+   }
 
   @Override
   protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {

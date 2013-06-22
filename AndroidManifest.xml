@@ -22,9 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <service android:enabled="true"
+        <service android:enabled="true"
             android:name="com.example.drivequickstart.UploaderService">
-        </service> -->
+        </service>
         
         <activity android:name="com.example.drivequickstart.view.PhotosActivity"/>
         <activity android:name="com.example.drivequickstart.view.VideosActivity"/>

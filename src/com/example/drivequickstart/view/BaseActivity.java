@@ -1,24 +1,20 @@
 package com.example.drivequickstart.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.example.drivequickstart.R;
-import com.example.drivequickstart.model.DataModel;
-
-import com.haarman.listviewanimations.itemmanipulation.AnimateDismissAdapter;
-import com.haarman.listviewanimations.itemmanipulation.OnDismissCallback;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.CheckedTextView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import com.example.drivequickstart.R;
+import com.example.drivequickstart.UploaderService;
+import com.example.drivequickstart.model.DataModel;
+import com.haarman.listviewanimations.itemmanipulation.AnimateDismissAdapter;
+import com.haarman.listviewanimations.itemmanipulation.OnDismissCallback;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaseActivity extends Activity {
 	
@@ -28,8 +24,10 @@ public class BaseActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState, int mediaMode) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_animateremoval);
-		
-		mSelectedPositions = new ArrayList<Integer>();
+
+        this.startService(new Intent(this, UploaderService.class));
+
+        mSelectedPositions = new ArrayList<Integer>();
 		
 		ListView listView = (ListView) findViewById(R.id.activity_animateremoval_listview);
 		mAdapter = new MyListAdapter(this, DataModel.getItems(mediaMode), mediaMode);
@@ -65,7 +63,12 @@ public class BaseActivity extends Activity {
 			}
 		});
 	}
-	
+
+    @Override
+    public void onDestroy() {
+        this.stopService(new Intent(this, UploaderService.class));
+    }
+
 	private class MyOnDismissCallback implements OnDismissCallback {
 
 		@Override
