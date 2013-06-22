@@ -1,11 +1,6 @@
 package com.example.drivequickstart.view;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
@@ -17,11 +12,17 @@ import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.example.drivequickstart.Logger;
 import com.example.drivequickstart.R;
 import com.example.drivequickstart.model.DataModel;
+import com.example.drivequickstart.model.FileUtil;
+import com.example.drivequickstart.model.MediaFile;
 import com.haarman.listviewanimations.ArrayAdapter;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyListAdapter extends ArrayAdapter<String> {
 	private BaseActivity mActivity;
@@ -63,7 +64,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
 		if (viewHolder.ctv != null) viewHolder.ctv.setText(fileName);
 		if (viewHolder.ctv != null) viewHolder.ctv.setChecked(mSelectedPositions.contains(position));
         
-		new ThumbnailTask(position, viewHolder, this.dataMode).execute(filePath);
+		new ThumbnailTask(position, viewHolder, this.dataMode, null, null).execute(filePath);
 		//new ThumbnailTask(position, viewHolder, this.dataMode).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, filePath);
 		
 		return lview;
@@ -94,15 +95,19 @@ public class MyListAdapter extends ArrayAdapter<String> {
         return imageBitmap;
 	}
 	
-	private static class ThumbnailTask extends AsyncTask<String, Void, Bitmap> {
+	public static class ThumbnailTask extends AsyncTask<String, Void, Bitmap> {
 	    private int mPosition;
 	    private ViewHolder mHolder;
 	    private int mediaType;
+        private MediaFile mediaFile;
+        private Context context;
 
-	    public ThumbnailTask(int position, ViewHolder holder, int mediaType) {
+	    public ThumbnailTask(int position, ViewHolder holder, int mediaType, MediaFile mediaFile, Context context) {
 	        mPosition = position;
 	        mHolder = holder;
 	        this.mediaType = mediaType;
+            this.mediaFile = mediaFile;
+            context = context;
 	    }
 
 	    @Override
@@ -118,7 +123,14 @@ public class MyListAdapter extends ArrayAdapter<String> {
 	            	Logger.debug("Priyanka", "No Image found for position: " + 
 		        			mPosition);
 	            }
-	        } else {
+	        } else if (context != null && this.mediaFile != null) {
+                 mediaFile.setThumbnail(bitmap);
+                try {
+                 FileUtil.writeToInternalStorage(context, mediaFile, mediaFile.getStateFile().getAbsolutePath());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
 	        	//if (this.mediaType == DataModel.MODE_PICTURES) System.out.println("Priyanka:[holder null]missed image at:"+mPosition);
 	        	Logger.debug("Priyanka", "Holder is Null for position: " + 
 	        			mPosition);

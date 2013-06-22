@@ -28,7 +28,13 @@ public class DataModel {
 //		}
 		return items;
 	}
-	
+
+    public static String getCameraRollDir() {
+        File dcimCameraDir = new File(Environment.getExternalStorageDirectory(),
+                "DCIM/Camera");
+        return dcimCameraDir.getAbsolutePath();
+    }
+
 	public static HashMap<String, File> getDCIMCameraRoll(int mode) {
 		HashMap<String, File> mediaFiles = new HashMap<String, File>();
 		

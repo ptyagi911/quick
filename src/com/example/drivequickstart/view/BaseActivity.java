@@ -8,8 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
 import com.example.drivequickstart.R;
-import com.example.drivequickstart.UploaderService;
 import com.example.drivequickstart.model.DataModel;
+import com.example.drivequickstart.model.UploaderService;
 import com.haarman.listviewanimations.itemmanipulation.AnimateDismissAdapter;
 import com.haarman.listviewanimations.itemmanipulation.OnDismissCallback;
 
