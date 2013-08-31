@@ -9,6 +9,53 @@ import java.io.File;
  */
 
 public class MediaFile {
+
+    public int getMediaId() {
+        return mediaId;
+    }
+
+    public void setMediaId(int mediaId) {
+        this.mediaId = mediaId;
+    }
+
+    public int getMediaType() {
+        return mediaType;
+    }
+
+    public void setMediaType(int mediaType) {
+        this.mediaType = mediaType;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public Object getThumbnailBlob() {
+        return thumbnailBlob;
+    }
+
+    public void setThumbnailBlob(Object thumbnailBlob) {
+        this.thumbnailBlob = thumbnailBlob;
+    }
+
+    private int mediaId;
+    private int mediaType;
+    private String fileName;
+    private Object thumbnailBlob;
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
+
+    private File file;
     private String name;
     private String absolutePath;
     private boolean isUploaded = false;

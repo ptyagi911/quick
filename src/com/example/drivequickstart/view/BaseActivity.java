@@ -1,7 +1,6 @@
 package com.example.drivequickstart.view;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,7 +8,6 @@ import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
 import com.example.drivequickstart.R;
 import com.example.drivequickstart.model.DataModel;
-import com.example.drivequickstart.model.UploaderService;
 import com.haarman.listviewanimations.itemmanipulation.AnimateDismissAdapter;
 import com.haarman.listviewanimations.itemmanipulation.OnDismissCallback;
 
@@ -17,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseActivity extends Activity {
-	
+
+    private DataModel dataModel;
 	private List<Integer> mSelectedPositions;
 	private MyListAdapter mAdapter;
 	
@@ -25,17 +24,19 @@ public class BaseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_animateremoval);
 
-        this.startService(new Intent(this, UploaderService.class));
+        dataModel = new DataModel(null);
+
+        //this.startService(new Intent(this, UploaderService.class));
 
         mSelectedPositions = new ArrayList<Integer>();
 		
 		ListView listView = (ListView) findViewById(R.id.activity_animateremoval_listview);
-		mAdapter = new MyListAdapter(this, DataModel.getItems(mediaMode), mediaMode);
+		mAdapter = new MyListAdapter(this, dataModel.getItems(mediaMode), mediaMode);
 		
 		final AnimateDismissAdapter<String> animateDismissAdapter = 
 				new AnimateDismissAdapter<String>(mAdapter, new MyOnDismissCallback());
 		animateDismissAdapter.setListView(listView);
-		listView.setAdapter(animateDismissAdapter);
+		listView.setAdapter(mAdapter);
 		
 		Button button = (Button) findViewById(R.id.activity_animateremoval_button);
 		button.setOnClickListener(new OnClickListener() {
@@ -66,7 +67,8 @@ public class BaseActivity extends Activity {
 
     @Override
     public void onDestroy() {
-        this.stopService(new Intent(this, UploaderService.class));
+        super.onDestroy();
+        //this.stopService(new Intent(this, UploaderService.class));
     }
 
 	private class MyOnDismissCallback implements OnDismissCallback {

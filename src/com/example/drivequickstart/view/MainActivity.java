@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.widget.Toast;
-import com.example.drivequickstart.model.UploaderService;
+//import com.example.drivequickstart.model.UploaderService;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
    
     //Start the uploader service
-    this.startService(new Intent(this, UploaderService.class));
+    //this.startService(new Intent(this, UploaderService.class));
     
     //This code should go under uploader service
     credential = GoogleAccountCredential.usingOAuth2(this, DriveScopes.DRIVE);
@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 
    @Override
    public void onDestroy() {
-       this.stopService(new Intent(this, UploaderService.class));
+       //this.stopService(new Intent(this, UploaderService.class));
    }
 
   @Override
