@@ -19,18 +19,16 @@ package com.example.drivequickstart.view;
 import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.util.Log;
+import android.view.*;
+import android.widget.*;
+import com.example.drivequickstart.R;
 import com.example.drivequickstart.model.DBController;
 import com.example.drivequickstart.model.DataModel;
 import com.example.drivequickstart.model.MediaFile;
 import com.example.drivequickstart.model.MediaStore;
 
 import java.util.ArrayList;
-
 
 /**
  * A list view example where the data comes from a custom ListAdapter
@@ -50,10 +48,64 @@ public class List4 extends ListActivity {
 
         mediaStore = MediaStore.getMediaStore(dbController);
 
+        ListView lv = getListView();
+        lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+        lv.setMultiChoiceModeListener(new ModeCallback());
         // Use our own list adapter
         setListAdapter(new SpeechListAdapter(this));
     }
+    private class ModeCallback implements ListView.MultiChoiceModeListener {
 
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.list_select_menu, menu);
+            mode.setTitle("Select Items");
+            setSubtitle(mode);
+            return true;
+        }
+
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return true;
+        }
+
+        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            /*switch (item.getItemId()) {
+                case R.id.share:
+                    Toast.makeText(List4.this, "Shared " + getListView().getCheckedItemCount() +
+                            " items", Toast.LENGTH_SHORT).show();
+                    mode.finish();
+                    break;
+                default:
+                    Toast.makeText(List4.this, "Clicked " + item.getTitle(),
+                            Toast.LENGTH_SHORT).show();
+                    break;
+            }*/
+            return true;
+        }
+
+        public void onDestroyActionMode(ActionMode mode) {
+        }
+
+        public void onItemCheckedStateChanged(ActionMode mode,
+                                              int position, long id, boolean checked) {
+            setSubtitle(mode);
+        }
+
+        private void setSubtitle(ActionMode mode) {
+            final int checkedCount = getListView().getCheckedItemCount();
+            switch (checkedCount) {
+                case 0:
+                    mode.setSubtitle(null);
+                    break;
+                case 1:
+                    mode.setSubtitle("One item selected");
+                    break;
+                default:
+                    mode.setSubtitle("" + checkedCount + " items selected");
+                    break;
+            }
+        }
+    }
 
     /**
      * A sample ListAdapter that presents content from arrays of speeches and
@@ -148,6 +200,21 @@ public class List4 extends ListActivity {
             mDialogue.setText(words);
             addView(mDialogue, new LinearLayout.LayoutParams(
                     LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+
+            checkedTextView = new CheckedTextView(context);
+            checkedTextView.setChecked(true);
+            checkedTextView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.v("Q", "Clicked checkbox");
+                }
+            });
+
+            RelativeLayout.LayoutParams checkedViewLayoutParams =
+                    new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            checkedViewLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_START);
+            addView(checkedTextView, checkedViewLayoutParams);
+
         }
 
         /**
@@ -166,5 +233,6 @@ public class List4 extends ListActivity {
 
         private TextView mTitle;
         private TextView mDialogue;
+        private CheckedTextView checkedTextView;
     }
 }

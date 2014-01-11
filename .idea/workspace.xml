@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="quick" />
+        <option name="name" value="quick" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
@@ -23,7 +34,6 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Media" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
@@ -33,7 +43,7 @@
     <file path="/fragment.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377897963828" ignored="false" />
     <file path="$PROJECT_DIR$/../DriveUploader/DriveUploader/src/main/java/org/androidbot/driveuploader/MainActivity.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1369705491848" ignored="false" />
     <file path="$PROJECT_DIR$/../DriveUploader/DriveUploader/src/main/AndroidManifest.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1369705508921" ignored="false" />
-    <file path="/Dummy.txt" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376607138103" ignored="false" />
+    <file path="/Dummy.txt" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1378059421074" ignored="false" />
     <file path="/PhotosActivity.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376608638607" ignored="false" />
     <file path="/BaseActivity.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377903997739" ignored="false" />
     <file path="$PROJECT_DIR$/../../Unicorn/Burstly_DISNEY_LITE_ANDROID_SSL_1.24.0.38159_2013060619326/samples/BasicSample/src/com/burstly/samplecl/MainActivity.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376687020367" ignored="false" />
@@ -45,7 +55,7 @@
     <file path="/strings.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376690869853" ignored="false" />
     <file path="/MyActivity.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376691039628" ignored="false" />
     <file path="$PROJECT_DIR$/../../Unicorn/DMUnified-Android-Samples/Android_Skyrocket_nonUnified/res/values/styles.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376690759968" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377891670073" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1378059501818" ignored="false" />
     <file path="/a.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376690685994" ignored="false" />
     <file path="/styles.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376690759968" ignored="false" />
     <file path="$PROJECT_DIR$/../../Unicorn/DMUnified-Android-Samples/Android_Skyrocket_unified/build.xml" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1376692720389" ignored="false" />
@@ -62,9 +72,9 @@
     <file path="$USER_HOME$/Downloads/SQLiteStorageOption/gen/com/javapapers/android/sqlitestorageoption/R.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377897481844" ignored="false" />
     <file path="$USER_HOME$/Downloads/SQLiteStorageOption/gen/com/javapapers/android/sqlitestorageoption/Manifest.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377897481844" ignored="false" />
     <file path="$USER_HOME$/Downloads/SQLiteStorageOption/gen/com/javapapers/android/sqlitestorageoption/BuildConfig.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377897709995" ignored="false" />
-    <file path="/DBController.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377909451718" ignored="false" />
+    <file path="/DBController.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1378059027858" ignored="false" />
     <file path="/Media.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377902570104" ignored="false" />
-    <file path="/List4.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1377904020551" ignored="false" />
+    <file path="/List4.java" changelist="9a98e06e-a766-4ba4-bc3a-4ac2b46fc096" time="1378060482369" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +89,24 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DataModel.java" line="123" class="com.example.drivequickstart.model.DataModel" package="com.example.drivequickstart.model">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -115,24 +143,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DataModel.java" line="123" class="com.example.drivequickstart.model.DataModel" package="com.example.drivequickstart.model">
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -142,52 +152,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DataModel.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/MyListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="118" column="8" selection-start="4076" selection-end="4076" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataModel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DataModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="25" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1131#1141#0" expanded="true" />
-                <element signature="e#1868#2489#0" expanded="true" />
                 <element signature="e#2020#2036#0" expanded="true" />
-                <element signature="e#2470#2471#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Method.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/lang/reflect/Method.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashMap.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/util/HashMap.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="String.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/lang/String.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="22" selection-start="3690" selection-end="3690" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DBController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DBController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="24" selection-start="1083" selection-end="1083" vertical-scroll-proportion="-0.75342464">
+            <state line="71" column="38" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -196,39 +185,7 @@
       <file leaf-file-name="List4.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/List4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="60" selection-start="1395" selection-end="1395" vertical-scroll-proportion="-6.423077">
-              <folding>
-                <element signature="e#0#5355#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MediaStore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/MediaStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="38" selection-start="466" selection-end="486" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#165#176#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="20" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MediaFile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/MediaFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="17" selection-start="171" selection-end="593" vertical-scroll-proportion="0.0">
+            <state line="58" column="31" selection-start="2008" selection-end="2014" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -237,9 +194,30 @@
       <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="38" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
+            <state line="33" column="30" selection-start="1129" selection-end="1142" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="59" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_animateremoval_row.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_animateremoval_row.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="49" selection-start="240" selection-end="454" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -253,29 +231,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/androidbot/EfficientAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/model/UploaderService.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/androidbot/List15.java" />
-        <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/MyListAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/androidbot/List4.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/Shakespeare.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/Media.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/MediaStore.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/model/MediaFile.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/model/MediaStore.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/drivequickstart/model/DBController.java" />
+        <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/MyListAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_animateremoval_row.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/view/List4.java" />
         <option value="$PROJECT_DIR$/src/com/example/drivequickstart/model/DataModel.java" />
-        <option value="$PROJECT_DIR$/src/com/example/drivequickstart/model/DBController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="1513" />
+    <option name="y" value="72" />
     <option name="width" value="1680" />
-    <option name="height" value="956" />
+    <option name="height" value="758" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -303,6 +282,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -407,9 +387,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="All">
           <PATH>
@@ -436,8 +451,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="16" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
   </component>
   <component name="RecentsManager">
@@ -446,8 +461,8 @@
       <recent name="com.example.drivequickstart.view" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/res/layout" />
       <recent name="$PROJECT_DIR$/res/menu" />
+      <recent name="$PROJECT_DIR$/res/layout" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.DriveQuickstart">
@@ -503,19 +518,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -541,6 +543,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -663,32 +678,33 @@
     <option name="totallyTimeSpent" value="3694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="956" extended-state="6" />
+    <frame x="1513" y="72" width="1680" height="758" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32965687" sideWeight="0.6722488" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3361244" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277512" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277512" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23806609" sideWeight="0.6722488" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952153" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23835784" sideWeight="0.6126761" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20095694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3361244" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38732395" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952153" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -760,55 +776,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/androidbot/EfficientAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="73" selection-start="2" selection-end="3603" vertical-scroll-proportion="1.212963">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/TabLayoutActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="60" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/UploaderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="55" selection-start="0" selection-end="4726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/MyListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="8" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="9" selection-start="1734" selection-end="1734" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/androidbot/List15.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="74" selection-start="0" selection-end="3989" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="20" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="106" column="74" selection-start="0" selection-end="3989" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/MediaFile.java">
@@ -827,61 +797,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="22" selection-start="3690" selection-end="3690" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/util/HashMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/lang/reflect/Method.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/android/view/ViewGroup.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="16" selection-start="8194" selection-end="8194" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/WifiMobileDataNetworkMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="60" selection-start="1043" selection-end="1043" vertical-scroll-proportion="-1.1722114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DBController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="38" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_animateremoval_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="49" selection-start="240" selection-end="454" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/MyListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="8" selection-start="4076" selection-end="4076" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="38" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
+        <state line="33" column="30" selection-start="1129" selection-end="1142" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/list_select_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="59" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/view/List4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="60" selection-start="1395" selection-end="1395" vertical-scroll-proportion="-6.423077">
-          <folding>
-            <element signature="e#0#5355#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="22" selection-start="3690" selection-end="3690" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/util/HashMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AndroidADK/platforms/android-18/android.jar!/java/lang/reflect/Method.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0">
+        <state line="58" column="31" selection-start="2008" selection-end="2014" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DataModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="25" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1131#1141#0" expanded="true" />
-            <element signature="e#1868#2489#0" expanded="true" />
             <element signature="e#2020#2036#0" expanded="true" />
-            <element signature="e#2470#2471#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/drivequickstart/model/DBController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="1083" selection-end="1083" vertical-scroll-proportion="-0.75342464">
-          <folding />
         </state>
       </provider>
     </entry>

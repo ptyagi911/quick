@@ -67,7 +67,7 @@ public class MyListAdapter extends ArrayAdapter<Object> {
 			
 			viewHolder = new ViewHolder();
 			viewHolder.checkedTextView = (CheckedTextView)convertView.findViewById(R.id.CheckedTextView);//getChildAt(1);
-			viewHolder.imageView = (ImageView)convertView.findViewById(R.id.icon);//getChildAt(0);//(ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
+			//viewHolder.imageView = (ImageView)convertView.findViewById(R.id.icon);//getChildAt(0);//(ImageView) mActivity.findViewById(R.id.thumbnail_microkind);
             viewHolder.textView = (TextView)convertView.findViewById(R.id.text);
 
 			convertView.setTag(viewHolder);
@@ -78,7 +78,7 @@ public class MyListAdapter extends ArrayAdapter<Object> {
 		viewHolder.position = position;
 
         viewHolder.textView.setText(mediaFile.getName());
-        viewHolder.imageView.setImageBitmap(mediaFile.getThumbnail());
+        //viewHolder.imageView.setImageBitmap(mediaFile.getThumbnail());
 
 		return convertView;
 	}

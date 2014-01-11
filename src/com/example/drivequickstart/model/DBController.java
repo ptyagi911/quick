@@ -34,6 +34,7 @@ public class DBController extends SQLiteOpenHelper {
 	}
 	
 	public synchronized void insertMediaRow(HashMap<String, String> queryValues) {
+        try {
 		SQLiteDatabase database = this.getWritableDatabase();
 		ContentValues values = new ContentValues();
         values.put("mediaType", queryValues.get("mediaType"));
@@ -41,6 +42,9 @@ public class DBController extends SQLiteOpenHelper {
         values.put("thumbnail", queryValues.get("thumbnail"));
 		database.insert("media", null, values);
 		database.close();
+        } catch (Exception e) {
+            Log.v("quick", "DBException: " + e.getMessage());
+        }
 	}
 	
 	public int updateMediaRow(HashMap<String, String> queryValues) {
@@ -65,8 +69,9 @@ public class DBController extends SQLiteOpenHelper {
 	}
 	
 	public ArrayList<MediaFile> getAllMediaFiles() {
-		ArrayList<MediaFile> mediaList;
-		mediaList = new ArrayList<MediaFile>();
+        ArrayList<MediaFile> mediaList = new ArrayList<MediaFile>();
+        try {
+
 		String selectQuery = "SELECT * FROM media";
 	    SQLiteDatabase database = this.getWritableDatabase();
 	    Cursor cursor = database.rawQuery(selectQuery, null);
@@ -87,7 +92,9 @@ public class DBController extends SQLiteOpenHelper {
 
 	        } while (cursor.moveToNext());
 	    }
-	 
+        } catch (Exception e) {
+            Log.v("quick", "DBException: " + e.getMessage());
+        }
 	    // return contact list
 	    return mediaList;
 	}
